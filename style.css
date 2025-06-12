@@ -1,25 +1,25 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 :root {
-    font-family: "Inter", sans-serif;
-    font-size: 62.5%;
-    --background-primary: #F4F5FB;
-    --background-secondary: #FFF;
-    --color-brand: #CA3884;
-    --color-brand-hover: #A52C6B;
-    --color-danger: #C93847;
-    --content-primary: #080B12;
-    --content-secondary: #374151;
-    --content-tertiary: #9CA3AF;
-    --always-white: #FFF;
-    --border-primary: #D1D5DB;
-    --border-hover: #B9C2D0;
+   font-family: "Inter", sans-serif;
+   font-size: 62.5%;
 
+  --background-primary: #F4F5FB;
+  --background-secondary: #FFF;
+  --color-brand: #CA3884;
+  --color-brand-hover: #A52C6B;
+  --color-danger: #C93847;
+  --content-primary: #080B12;
+  --content-secondary: #374151;
+  --content-tertiary: #9CA3AF;
+  --always-white: #FFF;
+  --border-primary: #D1D5DB;
+  --border-hover: #B9C2D0;
 }
 
 body {
@@ -39,7 +39,7 @@ header {
 
     img {
         width: 15.4rem;
-        margin: auto;
+        margin-inline: auto;
         margin-bottom: 3rem;
     }
 
@@ -52,7 +52,6 @@ header {
         margin-bottom: 1.6rem;
         color: var(--color-brand);
         cursor: pointer;
-
     }
 
     h1 {
@@ -60,7 +59,6 @@ header {
         color: var(--content-primary);
         line-height: 3.2rem;
     }
-
 }
 
 main {
@@ -71,7 +69,6 @@ main {
 .add-item {
     margin-bottom: 4rem;
 
-
     input {
         width: 100%;
         padding: 1.2rem;
@@ -81,14 +78,12 @@ main {
         outline: none;
         color: var(--content-primary);
 
-
         &::placeholder {
-
             color: var(--content-tertiary);
         }
 
         &:hover {
-            border: 2px solid var(--border-hover);
+         border: 2px solid var(--border-hover);
         }
 
         &:focus {
@@ -97,7 +92,6 @@ main {
     }
 
     button {
-
         background: var(--color-brand);
         border: none;
         color: var(--always-white);
@@ -109,8 +103,8 @@ main {
         font-weight: 600;
         cursor: pointer;
 
-     &:hover {
-      background: var(--color-brand-hover);
+        &:hover {
+         background: var(--color-brand-hover);   
         }
     }
 }
@@ -133,7 +127,6 @@ main {
             display: flex;
             gap: 1.2rem;
             align-items: center;
-
         }
 
         input {
@@ -145,7 +138,6 @@ main {
             height: 1.6rem;
             border: 1px solid var(--border-primary);
             border-radius: .6rem;
-
         }
 
         div:has(input:checked) {
@@ -157,58 +149,48 @@ main {
 
             label {
                 text-decoration: line-through;
-
             }
-
-          
-
         }
 
-        button{
+        button {
             background: none;
             border: none;
             display: flex;
             align-items: center;
+            cursor: pointer;
 
-            img{
+            img {
                 width: 1.6rem;
                 opacity: 0.7;
             }
         }
 
-        label{
+        label {
             cursor: pointer;
         }
     }
-
-
 }
 
-.warning{
-    background: var(--color-danger) ;
+.warning {
+    background: var(--color-danger);
     color: var(--always-white);
     padding: 1.2rem;
     display: flex;
-    justify-content: space-between ;
-    border-radius: 1.2rem; 
+    justify-content: space-between;
+    border-radius: 1.2rem;
     margin-top: 2.4rem;
 
-    /efeitos para a hora que for aparecer/
     opacity: 1;
     transform: translateY(0);
     transition: opacity .4s ease, transform .4s ease;
 
-    div{
-
+    div {
         display: flex;
-
         align-items: center;
-
         gap: .8rem;
-
     }
 
-    i{
+    i {
         font-size: 2rem;
     }
 
@@ -220,33 +202,30 @@ main {
     }
 }
 
-.hide-warning{
+.hide-warning {
     opacity: 0;
     transform: translateY(-10px);
 }
 
-@media (min-width:627px){
-    header{
-        img{
+@media (min-width: 627px) {
+       header {
+        img {
             margin-bottom: 6.4rem;
         }
-    }
+       }
 
-    .add-item{
-        display: grid;
-        grid-template-columns:repeat(10,1fr) ;
-        gap: 1.6rem;
+       .add-item {
+          display: grid;
+          grid-template-columns: repeat(10, 1fr);
+          gap: 1.6rem;
 
-
-        input{
+          input {
             margin-bottom: 0;
             grid-column: 1/8;
+          }
 
-        }
-
-        button{
+          button {
             grid-column: 8/11;
-
-        }
+          }
     }
 }
